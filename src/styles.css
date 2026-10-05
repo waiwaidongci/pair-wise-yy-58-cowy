@@ -100,11 +100,35 @@ body { margin: 0; min-width: 320px; background: var(--paper); }
 .readiness { text-align: right; }
 .readiness strong { display: block; font-size: 22px; color: #146c5a; }
 .readiness span { color: #75867f; font-size: 11px; }
+.save-hint { margin: 10px 0 0; color: #7b8d86; font-size: 11px; line-height: 1.5; }
+.sync-section { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 18px 18px; }
+.sync-panel { border: 1px solid var(--line); border-radius: 6px; padding: 14px; background: #fafcfb; }
+.sync-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.sync-head strong { font-size: 13px; }
+.empty-state.slim { padding: 14px 8px; font-size: 12px; }
+.outbox-row { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px dashed var(--line); }
+.outbox-row strong, .outbox-row small { display: block; }
+.outbox-row strong { font-size: 12px; }
+.outbox-row small { color: #7b8d86; font-size: 11px; margin-top: 2px; }
+.sync-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.sync-log { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; max-height: 180px; overflow-y: auto; }
+.sync-log-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 8px; padding: 4px 0; font-size: 11px; color: #5c6f68; align-items: center; }
+.sync-log-row em { font-style: normal; color: #146c5a; }
+.sync-log-row em.duplicate { color: #995b14; }
+.sync-log-row em.rejected { color: var(--danger); }
+.arb-row { border: 1px solid #ecd9b8; background: #fffaf1; border-radius: 5px; padding: 10px; margin-bottom: 8px; }
+.arb-title { font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+.arb-versions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.arb-versions div { border: 1px solid var(--line); border-radius: 4px; padding: 8px; background: #fff; }
+.arb-versions span { display: block; color: #8a7a55; font-size: 10px; margin-bottom: 3px; }
+.arb-versions strong { font-size: 12px; font-weight: 600; }
+.arb-actions { display: flex; gap: 8px; margin-top: 8px; }
 
 @media (max-width: 980px) {
   .work-grid, .check-layout { grid-template-columns: 1fr; }
   .conflict-list { border-right: 0; border-bottom: 1px solid var(--line); }
   .review-grid { grid-template-columns: repeat(2, 1fr); }
+  .sync-section { grid-template-columns: 1fr; }
 }
 @media (max-width: 650px) {
   .workspace-page { padding: 16px 12px; }
